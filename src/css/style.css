@@ -94,6 +94,9 @@ button {
 .divider {
   border-bottom: 2px solid var(--primary-color);
 }
+.title {
+  text-transform: capitalize;
+}
 /* End utility classes */
 
 /* Cart icon styles */
@@ -110,8 +113,50 @@ button {
   fill: gray;
 }
 
+#count {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  padding: 2px;
+  border: solid 1px black;
+  border-radius: 10px;
+  background-color: #f0a868;
+}
+
 /* End cart icon styles */
 
+/* product grid styles */
+.product-grid {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: var(--dark-grey);
+  padding-left: 0;
+}
+
+.product-grid > li {
+  width: 150px;
+  /* border: 1px solid var(--light-grey); */
+  padding: 0.5em;
+  margin: 1em;
+}
+.product-grid h2 {
+  margin: 0;
+
+  font-size: 1.2em;
+}
+.product-grid a {
+  text-decoration: none;
+}
+.product-grid a:link,
+.product-grid a:visited {
+  color: var(--dark-grey);
+}
+.product-grid a:hover {
+  text-decoration: underline;
+}
 .mission {
   padding: 0 0.5em;
   /* margin: 0.5em 0; */
@@ -133,6 +178,54 @@ button {
   text-decoration: none;
   color: var(--dark-grey);
 }
+
+.list-total {
+  text-align: right;
+}
+.list-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+}
+.list-footer > a {
+  /* display: block; */
+  padding: 0.3em 0.5em;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+.list-footer a:link,
+.list-footer a:visited {
+  color: var(--dark-grey);
+}
+
+/* checkout styles */
+.checkout-form {
+  padding: 0.5em;
+}
+.checkout-form label {
+  display: block;
+}
+.checkout-form input {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.checkout-summary > ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.checkout-summary li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout-summary input {
+  width: 25%;
+  font-size: 1em;
+}
+
 /* Styles for product lists */
 .product-card {
   flex: 1 1 45%;
@@ -202,6 +295,63 @@ button {
   grid-column: 3;
 }
 
+/* alert styles */
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  border: 1px solid darkorange;
+}
+.alert > p {
+  margin: 0;
+}
+
+/* jj--delete icon styling */
+.cart-delete {
+  position: relative;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  border: 1px solid var(--dark-grey);
+  margin: auto;
+  padding: 0.2rem 0.4rem;
+  bottom: 2rem;
+  left: 1.8rem;
+}
+
+.cart-delete:hover {
+  background: var(--primary-color);
+}
+
+.cart-delete:active {
+  background: firebrick;
+  color: white;
+  border: white;
+}
+
+/* Start CSS for newsletter form */
+
+.newsletter-form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.newsletter {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
@@ -219,4 +369,9 @@ button {
 footer {
   font-size: var(--small-font);
   padding: 1em;
+}
+
+/*Total in cart functionality*/
+.hide {
+  display: none;
 }

@@ -1,1 +1,13 @@
-Hello GUYS!
+Helps npm
+
+npm install
+npm run preview 
+npm start 
+npm run build  
+npm run format
+npm run lint
+
+start: This will run our development server. You will use this the most.
+build: This will prepare our code to be deployed to production. You can run this at anytime to see what the "build" version of the site looks like.
+lint: This will run Eslint against the code to look for style and syntax errors. You should do this each time you are ready to commit. Make sure to clean up any errors it finds before you commit!
+format: This will run Prettier on your code and format it all consistently. You should also do this as a step in your commit process.
