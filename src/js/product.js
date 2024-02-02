@@ -34,7 +34,7 @@ function displayComments(comments) {
   const commentsList = document.getElementById("commentsList");
   commentsList.innerHTML = "";
 
-  comments.forEach((comment) => {
+  comments.forEach(comment => {
     const li = document.createElement("li");
     li.textContent = comment;
     commentsList.appendChild(li);
@@ -54,7 +54,7 @@ function handleCommentSubmission(event) {
     const comments = localStorage.getItem(getProductId)
       ? JSON.parse(localStorage.getItem(getProductId))
       : [];
-
+    
     comments.push(comment);
     localStorage.setItem(getProductId, JSON.stringify(comments));
 
